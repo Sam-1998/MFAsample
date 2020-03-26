@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MFAsample_final"
+             x:Class="MFAsample_final.MainPage" 
+            NavigationPage.HasNavigationBar="false"
+            BarTextColor="Black">
+    
+    <ContentPage Title="Home" IconImageSource="home_icon.png">
+        <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+            <Image Source="page_home.png" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="Map" IconImageSource="map_icon.png">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+            <Image Source="page_map.png" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title ="Car" IconImageSource="car_icon.png">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+                <!-- Place new controls here -->
+                <Image Source="front.jpg" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+                <ImageButton Source="button1.jpg"
+                     HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="button2.jpg"
+                     HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="button3.jpg"
+                     HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="button4.jpg"
+                     HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+                <ImageButton Source="button5.jpg"
+                     HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                             Clicked="shareCarKey"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    <ContentPage Title="Key" IconImageSource="key_icon.png" BackgroundColor="#EDEDED">
+        <!-- Used to be
+    <ContentPage Title="Support" IconImageSource="support_icon.jpg"/>    -->
+        <StackLayout Spacing="0">
+            <ImageButton Source="button5.jpg"
+                         Clicked="shareCarKey"/>
+            <Image Source="page_key_noUpperPart.png" />
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage Title="Profile" IconImageSource="profile_icon.png"/>
+</TabbedPage>

@@ -1,0 +1,12 @@
+Att göra lista:
+Idag:
+Sätt upp github och få igång allt på laptoppen, anteckna allt och vägled Johan.
+
+Senare:
+- Fixa lagget med tabbedLayout (fördmoligen måste man minimiera storleken
+på bilderna)
+- Hitta några nya sample bilder för de onödiga inställningarna med riktiga knappar
+- Fixa färidgt Car key sidan
+- Fråga crayvenn ifall de är okej att ha kar cey sidan istället för support
+(Med tanke på att vi inte vet hur support ser ut och pga att de är en dålig
+inställning att ha på front-sidan generellt sätt.)
