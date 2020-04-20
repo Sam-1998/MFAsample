@@ -2,12 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="MFAsample_final.CarSharingPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#EDEDED">
-            <Image Source="front_changeCarKey.png" />
-        </StackLayout>
+        <ListView ItemsSource="{Binding KeyList}"
+                   HasUnevenRows="true"
+                   SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <controls:CircleImage
+                                       HeightRequest="60"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        Aspect="AspectFill"
+                                       WidthRequest="66"
+                                       Grid.RowSpan="2"
+                                       Source="{Binding PictureSource}"/>
+                            <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+                                       VerticalOptions="End"/>
+                            <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       VerticalOptions="Start"
+                                       Text="{Binding Permissions}"/>
+                        </Grid>
+                    </ViewCell>
+                    <!-- <ViewCell Text="" TextColor="Black"/>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

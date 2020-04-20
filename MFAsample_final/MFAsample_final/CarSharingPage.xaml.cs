@@ -15,6 +15,7 @@ namespace MFAsample_final
         public CarSharingPage()
         {
             InitializeComponent();
+            BindingContext = new ViewModel.MyListPageViewModel();
         }
     }
 }
