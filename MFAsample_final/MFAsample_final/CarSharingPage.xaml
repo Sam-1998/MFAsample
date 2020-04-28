@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="MFAsample_final.CarSharingPage">
     <ContentPage.Content>
+
         <ListView ItemsSource="{Binding KeyList}"
                    HasUnevenRows="true"
                    SeparatorVisibility="None">

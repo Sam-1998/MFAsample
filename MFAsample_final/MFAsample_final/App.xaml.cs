@@ -9,7 +9,7 @@ namespace MFAsample_final
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new FrontPage());
         }
 
         protected override void OnStart()

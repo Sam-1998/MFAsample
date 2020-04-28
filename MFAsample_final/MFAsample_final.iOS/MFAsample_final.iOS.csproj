@@ -85,6 +85,12 @@
     <ImageAsset Include="Assets.xcassets\Button5.imageset\button5.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_DataSet_Lodratt.dataset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_DataSet_Vagratt.dataset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Front.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -107,6 +113,30 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\front_changeCarKey.imageset\front_changeCarKey.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_DataSet_Lodratt.dataset\Group 1.svg">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_DataSet_Vagratt.dataset\IMG_0541 1.svg">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_image_Lodratt.imageset\Group 1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_image_Lodratt.imageset\Group 11.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_image_Lodratt.imageset\Group 12.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_Image_Vagratt.imageset\IMG_0541 1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_Image_Vagratt.imageset\IMG_0541 12.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_Image_Vagratt.imageset\IMG_0541 13.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Icon_Car.imageset\car_icon.png">
@@ -137,6 +167,12 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\front_changeCarKey.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_image_Lodratt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\HUD2_Car_Image_Vagratt.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\page_key_noUpperPart.imageset\Contents.json">
