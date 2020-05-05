@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MFAsample_final.LoginPage.MFAPage"
+             BackgroundColor="#EDEDED">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="volvoLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="#4C4C4C" />
+                <Setter Property="FontSize" Value="32" />
+                <Setter Property="FontFamily" Value="sans-serif" />
+                <Setter Property="FontAttributes" Value="None" />
+            </Style>
+            <Style x:Key="savedAccPicker" TargetType="Picker">
+                <Setter Property="TextColor" Value="#4C4C4C" />
+                <Setter Property="FontFamily" Value="sans-serif" />
+            </Style>
+            <Color x:Key="BackgroundColor">#FFFFFF</Color>
+            <Color x:Key="BorderColor">#E1E1E1</Color>
+
+            <!-- For adding borders to every button
+            <Style x:Key="InternalViewStyle" TargetType="ContentView">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="Padding" Value="10,10,10,10"></Setter>
+            </Style>
+            <Style x:Key="BorderStyle" TargetType="ContentView">
+                <Setter Property="BackgroundColor" Value="{StaticResource BorderColor}"/>
+                <Setter Property="Padding" Value="0,1,1,0"></Setter>
+            </Style> -->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="controlGrid" RowSpacing="0" ColumnSpacing="10" Padding="0">
+            <Grid.RowDefinitions>
+                <!--<RowDefinition Height="AUTO" /> -->
+                <RowDefinition Height="00" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+            <!-- Empty space, changed starting height instead -->
+            <!-- <BoxView BackgroundColor="Red" Grid.Row="1" HeightRequest="80"/> -->
+            <!-- Choose account text -->
+            <StackLayout Grid.Row="1" HeightRequest="60">
+                <Label Text="Choose an account" Style="{StaticResource volvoLabel}"
+                       Padding="15, 10"/>
+            </StackLayout>
+            <!-- Picker -->
+            <StackLayout Grid.Row="2" HeightRequest="40" Padding="20,0,20,0">
+                    <Picker Title="Select an account" TitleColor="#4C4C4C" Style="{StaticResource savedAccPicker}" x:Name="accountPicker"/> <!-- Connected to the constructor of the MFAPage.xaml.cs file -->
+                </StackLayout>
+            <!-- Empty space -->
+            <BoxView BackgroundColor="#EDEDED" Grid.Row="3" HeightRequest="130"/>
+            <!-- TouchID login button -->
+                <StackLayout HeightRequest="150" Grid.Row="4"><!--BackgroundColor="#CFCFCF"-->
+                    <Button Text="Sign in with TouchID"
+                    ContentLayout="Top" Image="TouchID_icon.png" BackgroundColor="#EDEDED" FontSize="24" FontFamily="sans-serif" FontAttributes="None"
+                        HeightRequest="150" Clicked="TouchIDButtonClickedAsync" VerticalOptions="CenterAndExpand">
+                    </Button>
+                </StackLayout>
+                <!-- faceID login button. Add backgroundcolors to stacklayout and increase heigh on layout grid-4 to 152 and stacklayout grid-5 5o 151 and you'll have borders added -->
+                <StackLayout HeightRequest="150" Grid.Row="5"> <!--BackgroundColor="#CFCFCF"-->
+                <Button Text="Sign in with FaceID"
+                    ContentLayout="Top" Image="faceID_icon.png" BackgroundColor="#EDEDED" FontSize="24" FontFamily="sans-serif" FontAttributes="None"
+                        HeightRequest="150" VerticalOptions="CenterAndExpand"
+                        Clicked="FaceIDButtonClicked">
+                </Button>
+            </StackLayout>
+            <!-- Manual login button -->
+            <StackLayout HeightRequest="110" Grid.Row="6">
+                <Button Text="Sign in manually"
+                    ContentLayout="Top" Image="manual_icon.png" BackgroundColor="#EDEDED" FontSize="18" FontFamily="sans-serif" FontAttributes="None"
+                        HeightRequest="110" VerticalOptions="CenterAndExpand"
+                        Clicked="ManualLoginButtonClicked">
+                </Button>
+            </StackLayout>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

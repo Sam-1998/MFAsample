@@ -5,4 +5,6 @@
     <application android:label="MFAsample_final.Android">
 	</application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- Added for fingerprint scanning -->
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
 </manifest>
