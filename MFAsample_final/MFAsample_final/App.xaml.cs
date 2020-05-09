@@ -1,4 +1,5 @@
 ﻿using MFAsample_final.LoginPage;
+using MFAsample_final.ShareCarPage;
 using MFAsample_final.Tables;
 using SQLite;
 using System;
@@ -13,6 +14,8 @@ namespace MFAsample_final
         public App()
         {
             InitializeComponent();
+            MainPage = new NavigationPage(new AddKeyPage());
+            /*
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
             var db = new SQLiteConnection(dbpath);
             //var myquery = db.Table<SavedUserTable>().Where(u => u.Email.Equals(EntryUser.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
@@ -27,7 +30,7 @@ namespace MFAsample_final
             catch (SQLiteException e)
             {
                 MainPage = new NavigationPage(new FrontPage());
-            }
+            }*/
         }
 
         protected override void OnStart()

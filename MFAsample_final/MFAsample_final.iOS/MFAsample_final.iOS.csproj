@@ -85,6 +85,15 @@
     <ImageAsset Include="Assets.xcassets\Button5.imageset\button5.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Button_green.imageset\Button_Green.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Button_red.imageset\Button_Red.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\front_changeCarKey.imageset\front_changeCarKey.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\HUD2_Car_DataSet_Lodratt.dataset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -110,9 +119,6 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Button5.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\front_changeCarKey.imageset\front_changeCarKey.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\HUD2_Car_DataSet_Lodratt.dataset\Group 1.svg">
@@ -191,6 +197,12 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Icon_Manual.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Button_green.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Button_red.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\page_key_noUpperPart.imageset\Contents.json">
