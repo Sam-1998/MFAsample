@@ -11,7 +11,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="AUTO" />
                 <RowDefinition Height="AUTO" />
-            </Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
@@ -52,6 +53,7 @@
                 <StackLayout WidthRequest="60" HeightRequest="60" Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,200,100,0">
                     <ImageButton Source="Button_Green.png" Grid.Row="2" x:Name="CarStartButton" BackgroundColor="Transparent" Clicked="CarStartButton_Clicked"/>
                 </StackLayout>
+                <Button Text="Submit" Grid.Row="3" Clicked="SubmitButton_Clicked"/>
             </Grid>
         </ScrollView>
     </ContentPage.Content>

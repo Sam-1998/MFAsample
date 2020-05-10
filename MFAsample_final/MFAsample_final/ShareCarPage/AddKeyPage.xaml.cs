@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.Fingerprint;
+using Plugin.Fingerprint.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -116,6 +118,26 @@ namespace MFAsample_final.ShareCarPage
                 CarStart = true;
             }
 
+        }
+
+        private async void SubmitButton_Clicked(object sender, EventArgs e)
+        {
+            var result = await CrossFingerprint.Current.IsAvailableAsync(true);
+            if (result == true)
+            {
+                var request = new AuthenticationRequestConfiguration("Login", "");
+                var auth = await CrossFingerprint.Current.AuthenticateAsync(request);
+                if (auth.Authenticated)
+                {
+                    // Add new item to database, maybe connect it with the old one instead.
+                    await Navigation.PopAsync();
+                }
+            }
+            else
+            {
+                //Ping nummer altnerativ
+                await DisplayAlert("Unavailable", "This feature is unavailable on your device", "Continue");
+            }
         }
     }
 }
