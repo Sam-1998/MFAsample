@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+// To add database
+using System.IO;
+using SQLite;
+using MFAsample_final.Tables;
+
 namespace MFAsample_final.ShareCarPage
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -129,6 +134,23 @@ namespace MFAsample_final.ShareCarPage
                 var auth = await CrossFingerprint.Current.AuthenticateAsync(request);
                 if (auth.Authenticated)
                 {
+                    var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
+                    var db = new SQLiteConnection(dbpath);
+                    db.CreateTable<SharedCarKeyTable>();
+
+                    var item = new SharedCarKeyTable()
+                    {
+                        Email = EntryEmail.Text,
+                        DateBooked = EntryStartDate.Date,
+                        EndDate = EntryEndDate.Date,
+                        UpperLeftDoor = this.UpperLeftDoor,
+                        LowerLeftDoor = this.LowerLeftDoor,
+                        UpperRightDoor = this.UpperRightDoor,
+                        LowerRightDoor = this.LowerRightDoor,
+                        BagageDoor = this.BagageDoor,
+                        CarStart = this.CarStart
+                    };
+                    db.Insert(item);
                     // Add new item to database, maybe connect it with the old one instead.
                     await Navigation.PopAsync();
                 }

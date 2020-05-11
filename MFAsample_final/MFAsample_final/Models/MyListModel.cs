@@ -8,10 +8,14 @@ namespace MFAsample_final.Models
     public class MyListModel
     {
         public string Name { get; set;}
-        //public TimePicker timeLeft { get; set; }
-        public string Permissions { get; set; }
         public string PictureSource { get; set; }
         public DateTime DateBooked { get; set; }
         public DateTime EndDate { get; set; }
+        public Boolean UpperLeftDoor;
+        public Boolean LowerLeftDoor;
+        public Boolean UpperRightDoor;
+        public Boolean LowerRightDoor;
+        public Boolean BagageDoor;
+        public Boolean CarStart;
     }
 }

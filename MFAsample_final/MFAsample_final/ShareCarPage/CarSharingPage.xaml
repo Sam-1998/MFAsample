@@ -37,10 +37,9 @@
                             <Label Grid.Column="1"
                                        Grid.Row="1"
                                        VerticalOptions="Start"
-                                       Text="{Binding Permissions}"/>
+                                       Text="{Binding DateBooked}"/>
                         </Grid>
                     </ViewCell>
-                    <!-- <ViewCell Text="" TextColor="Black"/>-->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

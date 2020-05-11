@@ -14,7 +14,7 @@ namespace MFAsample_final
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new AddKeyPage());
+            MainPage = new NavigationPage(new CarSharingPage());
             /*
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
             var db = new SQLiteConnection(dbpath);
