@@ -172,6 +172,9 @@
     <ImageAsset Include="Assets.xcassets\Icon_Profile.imageset\profile_icon1.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Icon_Share.imageset\share_icon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Icon_Support.imageset\support_icon1.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -203,6 +206,9 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Button_red.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Icon_Share.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\page_key_noUpperPart.imageset\Contents.json">

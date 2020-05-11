@@ -11,7 +11,6 @@
             <Entry Placeholder="Password" IsPassword="True" x:Name="EntryPassword"></Entry>
             <Entry Placeholder="Confirm Password" IsPassword="True" x:Name="EntryConfirmPassword"></Entry>
             <Button Text="Sign Up" Clicked="RegisterButton_Clicked"></Button>
-            <Label Text="Already have account? Sign In" TextColor="Blue"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

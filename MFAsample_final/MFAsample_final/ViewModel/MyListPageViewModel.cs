@@ -27,26 +27,35 @@ namespace MFAsample_final.ViewModel
                 var myQuery = db.Table<SharedCarKeyTable>();
                 foreach (SharedCarKeyTable sharedKey in myQuery)
                 {
-                    KeyList.Add(new MyListModel
+                    MyListModel newList = new MyListModel
                     {
                         Name = sharedKey.Email,
-                        DateBooked = sharedKey.DateBooked,
-                        EndDate = sharedKey.EndDate,
+                        DateBooked = "StartDate: " + sharedKey.DateBooked.ToShortDateString(),
+                        EndDate = "EndDate: " + sharedKey.EndDate.ToShortDateString(),
                         BagageDoor = sharedKey.BagageDoor,
                         CarStart = sharedKey.CarStart,
                         LowerLeftDoor = sharedKey.LowerLeftDoor,
                         LowerRightDoor = sharedKey.LowerLeftDoor,
                         UpperLeftDoor = sharedKey.UpperLeftDoor,
-                        UpperRightDoor = sharedKey.UpperRightDoor
-                    });
+                        UpperRightDoor = sharedKey.UpperRightDoor,
+                        PictureSource = "https://i.pinimg.com/originals/0d/36/e7/0d36e7a476b06333d9fe9960572b66b9.jpg"
+                    };
+                    
+                    if(DateTime.Now.Date >= sharedKey.DateBooked.Date)
+                    {
+                        newList.DaysLeft = "Days Left: " + (sharedKey.EndDate.Date - DateTime.Now.Date).TotalDays + "d";
+                    }
+                    else
+                    {
+                        newList.DaysLeft = "Days before activating: " + (sharedKey.DateBooked.Date - DateTime.Now.Date).TotalDays + "d";
+                    }
+                    KeyList.Add(newList);
                 }
             }
             catch (SQLiteException errormsg)
             {
                 // Do nothing
             }
-
-            KeyList.Add(new MyListModel { Name = "Aleksander Pantic", PictureSource = "https://media-exp1.licdn.com/dms/image/C4D03AQFMAFBfTIrnBg/profile-displayphoto-shrink_200_200/0?e=1593043200&v=beta&t=9UA9M2XOFVvv3dk_YSgdYMe4VVHWzmL9Qqw6ltKD7b0"});
             }
     }
 }

@@ -12,5 +12,8 @@
             <Setter Property="BarTextColor" Value="Violet"></Setter>
             <Setter Property="" Value="Violet"></Setter>
         </Style>-->
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarTextColor" Value="#004895"/>
+        </Style>
     </Application.Resources>
 </Application>

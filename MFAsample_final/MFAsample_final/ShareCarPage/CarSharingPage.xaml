@@ -5,6 +5,20 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="MFAsample_final.CarSharingPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="share_icon.png"
+                 Text="Add digital key"
+                 Order="Primary"
+                 Priority="1" 
+                     Clicked="ToolbarAddItemButton_Clicked"
+                     />
+        <ToolbarItem 
+                 Text="Add digital key"
+                 Order="Primary"
+                 Priority="0" 
+                     Clicked="ToolbarAddItemButton_Clicked"
+                     />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
         <ListView ItemsSource="{Binding KeyList}"
@@ -29,15 +43,28 @@
                                         VerticalOptions="CenterAndExpand"
                                         Aspect="AspectFill"
                                        WidthRequest="66"
-                                       Grid.RowSpan="2"
+                                       Grid.RowSpan="3"
                                        Source="{Binding PictureSource}"/>
                             <Label Grid.Column="1"
+                                       Grid.Row="1"
                                        Text="{Binding Name}"
-                                       VerticalOptions="End"/>
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="Start"/>
+                            <Label Grid.Column="1"
+                                       Grid.Row="2"
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="Start"
+                                       Text="{Binding DateBooked}"/>
                             <Label Grid.Column="1"
                                        Grid.Row="1"
                                        VerticalOptions="Start"
-                                       Text="{Binding DateBooked}"/>
+                                       HorizontalOptions="End"
+                                       Text="{Binding DaysLeft}"/>
+                            <Label Grid.Column="1"
+                                       Grid.Row="2"
+                                       VerticalOptions="Start"
+                                       HorizontalOptions="End"
+                                       Text="{Binding EndDate}"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

@@ -10404,16 +10404,19 @@ namespace MFAsample_final.Droid
 			public const int profile_icon = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int support_icon = 2131230982;
+			public const int share_icon = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int tooltip_frame_dark = 2131230983;
+			public const int support_icon = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int tooltip_frame_light = 2131230984;
+			public const int tooltip_frame_dark = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int TouchID_icon = 2131230985;
+			public const int tooltip_frame_light = 2131230985;
+			
+			// aapt resource value: 0x7F08010A
+			public const int TouchID_icon = 2131230986;
 			
 			static Drawable()
 			{

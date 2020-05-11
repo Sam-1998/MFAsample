@@ -152,6 +152,7 @@ namespace MFAsample_final.ShareCarPage
                     };
                     db.Insert(item);
                     // Add new item to database, maybe connect it with the old one instead.
+                    MessagingCenter.Send<ContentPage>(this, "RefreshMainPage");
                     await Navigation.PopAsync();
                 }
             }

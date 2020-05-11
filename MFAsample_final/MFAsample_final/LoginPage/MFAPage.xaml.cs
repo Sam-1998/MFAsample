@@ -62,7 +62,7 @@ namespace MFAsample_final.LoginPage
                 var auth = await CrossFingerprint.Current.AuthenticateAsync(request);
                 if (auth.Authenticated)
                 {
-                    await Navigation.PushModalAsync(new MainPage());
+                    await Navigation.PushAsync(new MainPage());
                 }
             }
             else
