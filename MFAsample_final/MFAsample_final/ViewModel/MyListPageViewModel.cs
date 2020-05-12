@@ -19,7 +19,6 @@ namespace MFAsample_final.ViewModel
         public MyListPageViewModel()
         {
             KeyList = new ObservableCollection<MyListModel>();
-
             try
             {
                 var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UserDatabase.db");
